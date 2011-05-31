@@ -1,0 +1,42 @@
+{
+    "name" : "local",
+    "motd" : [
+        "Welcome to %(server_name)s! See /help for commands.",
+        "Map is %(map_name)s by %(map_author)s.",
+        "(server powered by pyspades)"
+    ],
+    "rules" : [
+        "No griefing, no bad words, etc."
+    ],
+    "max_players" : 2,
+    "cap_limit" : 10,
+    "map" : "pyspades",
+    "respawn_time" : 5, 
+    "master" : false,
+    "friendly_fire" : false,
+    "passwords" : {
+        "admin" : ["ass"]
+    },
+    "ssh" : {
+        "enabled" : false,
+        "port" : 38827,
+        "users" : {
+            "user" : "pass"
+        }
+    },
+    "server_prefix" : "[*]",
+    "timestamps" : true,
+    "logfile" : "log.txt",
+    "balanced_teams" : 1,
+    "login_retries" : 1,
+    "irc" : {
+        "enabled" : true,
+        "nickname" : "humpus",
+        "username" : "pyspades",
+        "realname" : "pyspades server bot",
+        "server" : "irc.esper.net",
+        "port" : 6667,
+        "channel" : "#humpus",
+        "commandprefix" : "."
+    }
+}
