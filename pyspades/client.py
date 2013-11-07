@@ -56,9 +56,6 @@ class ClientConnection(BaseConnection):
         connect_request.version = self.get_version()
         self.send_loader(connect_request, False, 255)
     
-    def get_version(self):
-        return crc32(open('../data/client.exe', 'rb').read())
-    
     def send_join(self, team = -1, weapon = -1):
         print 'joining team %s' % team
         loader = SizedData()
@@ -114,7 +111,6 @@ class ClientConnection(BaseConnection):
                 # raw_input('not completely parsed')
             # print contained.id
             if contained.id == loaders.MapStart.id:
-                print 'map size:', contained.size
                 self.map_size = contained.size
                 self.map = ByteWriter()
             elif contained.id == loaders.MapChunk.id:
